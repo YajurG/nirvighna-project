@@ -1,0 +1,1836 @@
+{
+	"info": {
+		"_postman_id": "02919cc8-3b7f-4d85-ac87-7f252753c189",
+		"name": "Candidate Database API Documentation",
+		"description": "This is documentation for the current APIs developed for the candidate database",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Candidates",
+			"item": [
+				{
+					"name": "Get Candidates",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/candidates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"candidates"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": null,
+									"description": "Optional. If none provided, default value is 10.",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Submits a get request to the database and retrieves candidates. Accepts a parameter for the number of records to be retrieved. If no number is specified, the default value will be set to 10."
+					},
+					"response": [
+						{
+							"name": "Example request with a limit of 7",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/candidates?limit=7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidates"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "7",
+											"description": "Optional. If none provided, default value is 10."
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3609"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e19-h3Iynx2pBZQgZxwHkCBft1/GtzA\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Apr 2021 02:56:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"first_name\": \"Graig\",\n        \"last_name\": \"Schroter\",\n        \"id\": 1,\n        \"job_title\": \"Internal Auditor\",\n        \"primary_email\": \"gschroter0@addtoany.com\",\n        \"secondary_email\": \"gschroter0@de.vu\",\n        \"contact_home\": \"9055803439\",\n        \"contact_mobile\": \"2069433382\",\n        \"contact_office\": \"5672393822\",\n        \"home_address\": \"6379 Dakota Drive\",\n        \"gender\": \"Agender\",\n        \"education\": \"Master's Degree\",\n        \"national_ID\": \"116-78-5556\",\n        \"work_experience\": \"15-20 years\",\n        \"country_id\": 13,\n        \"city_id\": 36,\n        \"current_employer_id\": 6,\n        \"previous_employer_id\": 15,\n        \"notice_period\": null,\n        \"salary\": null\n    },\n    {\n        \"first_name\": \"Geralda\",\n        \"last_name\": \"Le Brum\",\n        \"id\": 2,\n        \"job_title\": \"Data Coordiator\",\n        \"primary_email\": \"glebrum1@mediafire.com\",\n        \"secondary_email\": \"glebrum1@geocities.com\",\n        \"contact_home\": \"9002867139\",\n        \"contact_mobile\": \"4626295237\",\n        \"contact_office\": \"2111586755\",\n        \"home_address\": \"286 Barby Junction\",\n        \"gender\": \"Genderfluid\",\n        \"education\": \"Master's Degree\",\n        \"national_ID\": \"619-72-9150\",\n        \"work_experience\": \"10-15 years\",\n        \"country_id\": 24,\n        \"city_id\": 58,\n        \"current_employer_id\": 1,\n        \"previous_employer_id\": 19,\n        \"notice_period\": null,\n        \"salary\": null\n    },\n    {\n        \"first_name\": \"Winnifred\",\n        \"last_name\": \"Goulstone\",\n        \"id\": 3,\n        \"job_title\": \"Programmer I\",\n        \"primary_email\": \"wgoulstone2@bluehost.com\",\n        \"secondary_email\": \"wgoulstone2@weebly.com\",\n        \"contact_home\": \"7428792149\",\n        \"contact_mobile\": \"9114884119\",\n        \"contact_office\": \"3108175701\",\n        \"home_address\": \"06617 Gateway Junction\",\n        \"gender\": \"Agender\",\n        \"education\": \"Bachelor's Degree\",\n        \"national_ID\": \"431-45-6990\",\n        \"work_experience\": \"5-10 years\",\n        \"country_id\": 21,\n        \"city_id\": 54,\n        \"current_employer_id\": 1,\n        \"previous_employer_id\": 13,\n        \"notice_period\": null,\n        \"salary\": null\n    },\n    {\n        \"first_name\": \"Sayres\",\n        \"last_name\": \"Reynish\",\n        \"id\": 4,\n        \"job_title\": \"Geologist I\",\n        \"primary_email\": \"sreynish3@hostgator.com\",\n        \"secondary_email\": \"sreynish3@hao123.com\",\n        \"contact_home\": \"5401375714\",\n        \"contact_mobile\": \"6596697644\",\n        \"contact_office\": \"4155921526\",\n        \"home_address\": \"72 Park Meadow Crossing\",\n        \"gender\": \"Bigender\",\n        \"education\": \"Associate's Degree\",\n        \"national_ID\": \"486-30-4044\",\n        \"work_experience\": \"15-20 years\",\n        \"country_id\": 1,\n        \"city_id\": 2,\n        \"current_employer_id\": 19,\n        \"previous_employer_id\": 16,\n        \"notice_period\": null,\n        \"salary\": null\n    },\n    {\n        \"first_name\": \"Katuscha\",\n        \"last_name\": \"Strover\",\n        \"id\": 5,\n        \"job_title\": \"Software Engineer III\",\n        \"primary_email\": \"kstrover4@imdb.com\",\n        \"secondary_email\": \"kstrover4@hostgator.com\",\n        \"contact_home\": \"8475239721\",\n        \"contact_mobile\": \"3048244203\",\n        \"contact_office\": \"8526922474\",\n        \"home_address\": \"8 Macpherson Crossing\",\n        \"gender\": \"Genderqueer\",\n        \"education\": \"Associate's Degree\",\n        \"national_ID\": \"693-36-4152\",\n        \"work_experience\": \"3-5 years\",\n        \"country_id\": 6,\n        \"city_id\": 21,\n        \"current_employer_id\": 19,\n        \"previous_employer_id\": 2,\n        \"notice_period\": null,\n        \"salary\": null\n    },\n    {\n        \"first_name\": \"Jamal\",\n        \"last_name\": \"Ledamun\",\n        \"id\": 6,\n        \"job_title\": \"Compensation Analyst\",\n        \"primary_email\": \"jledamun5@multiply.com\",\n        \"secondary_email\": \"jledamun5@google.pl\",\n        \"contact_home\": \"5422862778\",\n        \"contact_mobile\": \"3919536896\",\n        \"contact_office\": \"9906345884\",\n        \"home_address\": \"8 New Castle Trail\",\n        \"gender\": \"Female\",\n        \"education\": \"Doctorate Degree\",\n        \"national_ID\": \"229-92-6002\",\n        \"work_experience\": \"5-10 years\",\n        \"country_id\": 23,\n        \"city_id\": 57,\n        \"current_employer_id\": 13,\n        \"previous_employer_id\": 19,\n        \"notice_period\": null,\n        \"salary\": null\n    },\n    {\n        \"first_name\": \"Glendon\",\n        \"last_name\": \"Cloke\",\n        \"id\": 7,\n        \"job_title\": \"Professor\",\n        \"primary_email\": \"gcloke6@mapy.cz\",\n        \"secondary_email\": \"gcloke6@dailymotion.com\",\n        \"contact_home\": \"4204872379\",\n        \"contact_mobile\": \"3038116049\",\n        \"contact_office\": \"3139953771\",\n        \"home_address\": \"421 Golf View Lane\",\n        \"gender\": \"Male\",\n        \"education\": \"High School Degree\",\n        \"national_ID\": \"480-85-5409\",\n        \"work_experience\": \"1-3 years\",\n        \"country_id\": 23,\n        \"city_id\": 56,\n        \"current_employer_id\": 14,\n        \"previous_employer_id\": 1,\n        \"notice_period\": null,\n        \"salary\": null\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get Candidates by field",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/candidatesByField?country_id=10&country_id=2&country_id=5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"candidatesByField"
+							],
+							"query": [
+								{
+									"key": "first_name",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "last_name",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "primary_email",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "secondary_email",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "national_ID",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "work_experience",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "city_id",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "current_employer_id",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "previous_employer_id",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "country_id",
+									"value": "10"
+								},
+								{
+									"key": "country_id",
+									"value": "2"
+								},
+								{
+									"key": "country_id",
+									"value": "5"
+								}
+							]
+						},
+						"description": "Queries database for candidates that match the given query parameters. \n\nRequires at least one query parameter from the options below to be passed."
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/candidatesByField?country_id=10&country_id=2&country_id=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidatesByField"
+									],
+									"query": [
+										{
+											"key": "first_name",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "last_name",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "primary_email",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "secondary_email",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "national_ID",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "work experience",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "country_id",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "city_id",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "current_employer_id",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "previous_employer_id",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "country_id",
+											"value": "10"
+										},
+										{
+											"key": "country_id",
+											"value": "2"
+										},
+										{
+											"key": "country_id",
+											"value": "5"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "3657"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e49-zBHvlfL2R6MOJYPChsuZQISERow\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Apr 2021 03:03:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"numOfRecords\": 7,\n    \"data\": [\n        {\n            \"first_name\": \"Guy\",\n            \"last_name\": \"O'Cannon\",\n            \"id\": 10,\n            \"job_title\": \"Marketing Assistant\",\n            \"primary_email\": \"gocannon9@columbia.edu\",\n            \"secondary_email\": \"gocannon9@123-reg.co.uk\",\n            \"contact_home\": \"3776789160\",\n            \"contact_mobile\": \"8626519031\",\n            \"contact_office\": \"1129713502\",\n            \"home_address\": \"3939 Dottie Point\",\n            \"gender\": \"Genderfluid\",\n            \"education\": \"High School Degree\",\n            \"national_ID\": \"895-12-6395\",\n            \"work_experience\": \"3-5 years\",\n            \"country_id\": 2,\n            \"city_id\": 7,\n            \"current_employer_id\": 1,\n            \"previous_employer_id\": 12,\n            \"notice_period\": null,\n            \"salary\": null\n        },\n        {\n            \"first_name\": \"Adaline\",\n            \"last_name\": \"Red\",\n            \"id\": 44,\n            \"job_title\": \"Environmental Specialist\",\n            \"primary_email\": \"ared17@sogou.com\",\n            \"secondary_email\": \"ared17@house.gov\",\n            \"contact_home\": \"9911484237\",\n            \"contact_mobile\": \"4101413366\",\n            \"contact_office\": \"4069280378\",\n            \"home_address\": \"61155 Linden Park\",\n            \"gender\": \"Genderqueer\",\n            \"education\": \"Doctorate Degree\",\n            \"national_ID\": \"675-16-9265\",\n            \"work_experience\": \"3-5 years\",\n            \"country_id\": 5,\n            \"city_id\": 18,\n            \"current_employer_id\": 15,\n            \"previous_employer_id\": 9,\n            \"notice_period\": null,\n            \"salary\": null\n        },\n        {\n            \"first_name\": \"Lucia\",\n            \"last_name\": \"Lyall\",\n            \"id\": 50,\n            \"job_title\": \"Civil Engineer\",\n            \"primary_email\": \"llyall1d@sphinn.com\",\n            \"secondary_email\": \"llyall1d@cloudflare.com\",\n            \"contact_home\": \"8992835254\",\n            \"contact_mobile\": \"2197932912\",\n            \"contact_office\": \"6464328052\",\n            \"home_address\": \"67 Lighthouse Bay Circle\",\n            \"gender\": \"Bigender\",\n            \"education\": \"Bachelor's Degree\",\n            \"national_ID\": \"267-65-5039\",\n            \"work_experience\": \"15-20 years\",\n            \"country_id\": 5,\n            \"city_id\": 16,\n            \"current_employer_id\": 4,\n            \"previous_employer_id\": 16,\n            \"notice_period\": null,\n            \"salary\": null\n        },\n        {\n            \"first_name\": \"Barrie\",\n            \"last_name\": \"Antonowicz\",\n            \"id\": 26,\n            \"job_title\": \"Senior Sales Associate\",\n            \"primary_email\": \"bantonowiczp@state.tx.us\",\n            \"secondary_email\": \"bantonowiczp@tuttocitta.it\",\n            \"contact_home\": \"1161634128\",\n            \"contact_mobile\": \"8474483161\",\n            \"contact_office\": \"1525219063\",\n            \"home_address\": \"47 Novick Terrace\",\n            \"gender\": \"Female\",\n            \"education\": \"Bachelor's Degree\",\n            \"national_ID\": \"826-24-6664\",\n            \"work_experience\": \"20+ years\",\n            \"country_id\": 10,\n            \"city_id\": 30,\n            \"current_employer_id\": 14,\n            \"previous_employer_id\": 3,\n            \"notice_period\": null,\n            \"salary\": null\n        },\n        {\n            \"first_name\": \"Leticia\",\n            \"last_name\": \"Corbyn\",\n            \"id\": 33,\n            \"job_title\": \"Account Representative III\",\n            \"primary_email\": \"lcorbynw@washington.edu\",\n            \"secondary_email\": \"lcorbynw@live.com\",\n            \"contact_home\": \"7108642714\",\n            \"contact_mobile\": \"7281299984\",\n            \"contact_office\": \"7758655602\",\n            \"home_address\": \"0 Boyd Way\",\n            \"gender\": \"Polygender\",\n            \"education\": \"Doctorate Degree\",\n            \"national_ID\": \"106-75-4849\",\n            \"work_experience\": \"20+ years\",\n            \"country_id\": 10,\n            \"city_id\": 30,\n            \"current_employer_id\": 16,\n            \"previous_employer_id\": 2,\n            \"notice_period\": null,\n            \"salary\": null\n        },\n        {\n            \"first_name\": \"Ellis\",\n            \"last_name\": \"Bullman\",\n            \"id\": 38,\n            \"job_title\": \"Chemical Engineer\",\n            \"primary_email\": \"ebullman11@answers.com\",\n            \"secondary_email\": \"ebullman11@arizona.edu\",\n            \"contact_home\": \"3368314823\",\n            \"contact_mobile\": \"3979962031\",\n            \"contact_office\": \"5686091835\",\n            \"home_address\": \"5 Saint Paul Way\",\n            \"gender\": \"Female\",\n            \"education\": \"High School Degree\",\n            \"national_ID\": \"417-34-7768\",\n            \"work_experience\": \"15-20 years\",\n            \"country_id\": 10,\n            \"city_id\": 30,\n            \"current_employer_id\": 15,\n            \"previous_employer_id\": 12,\n            \"notice_period\": null,\n            \"salary\": null\n        },\n        {\n            \"first_name\": \"Conny\",\n            \"last_name\": \"Sander\",\n            \"id\": 41,\n            \"job_title\": \"Budget/Accounting Analyst II\",\n            \"primary_email\": \"csander14@samsung.com\",\n            \"secondary_email\": \"csander14@phpbb.com\",\n            \"contact_home\": \"7059565123\",\n            \"contact_mobile\": \"1781452840\",\n            \"contact_office\": \"3339002093\",\n            \"home_address\": \"885 Mallard Road\",\n            \"gender\": \"Genderqueer\",\n            \"education\": \"Master's Degree\",\n            \"national_ID\": \"218-41-8945\",\n            \"work_experience\": \"20+ years\",\n            \"country_id\": 10,\n            \"city_id\": 32,\n            \"current_employer_id\": 8,\n            \"previous_employer_id\": 7,\n            \"notice_period\": null,\n            \"salary\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Candidate by ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/candidates/:candidateID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"candidates",
+								":candidateID"
+							],
+							"variable": [
+								{
+									"key": "candidateID",
+									"value": ""
+								}
+							]
+						},
+						"description": "Retrieves candidate record from database matching the ID given"
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/candidates/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidates",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "508"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1fc-V+Fb2SlQlli6UUmZIVX0+R5cM0s\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 07:38:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"first_name\": \"Graig\",\n    \"last_name\": \"Schroter\",\n    \"id\": 1,\n    \"job_title\": \"Internal Auditor\",\n    \"primary_email\": \"gschroter0@addtoany.com\",\n    \"secondary_email\": \"gschroter0@de.vu\",\n    \"contact_home\": \"9055803439\",\n    \"contact_mobile\": \"2069433382\",\n    \"contact_office\": \"5672393822\",\n    \"home_address\": \"6379 Dakota Drive\",\n    \"gender\": \"Agender\",\n    \"education\": \"Master's Degree\",\n    \"national_ID\": \"116-78-5556\",\n    \"work_experience\": \"15-20 years\",\n    \"country_id\": 13,\n    \"city_id\": 36,\n    \"current_employer_id\": 6,\n    \"previous_employer_id\": 15,\n    \"notice_period\": null,\n    \"salary\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update candidate record",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"contact_home\": \"9055803439\",\r\n    \"contact_office\": \"5672393822\",\r\n    \"contact_mobile\": \"2069433382\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/candidates/:candidateID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"candidates",
+								":candidateID"
+							],
+							"variable": [
+								{
+									"key": "candidateID",
+									"value": ""
+								}
+							]
+						},
+						"description": "Given a candidate's database ID, updates candidate information in database with the information provided in request."
+					},
+					"response": [
+						{
+							"name": "Example Request where ID is 1",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"contact_home\": \"9055803439\",\r\n    \"contact_office\": \"5672393822\",\r\n    \"contact_mobile\": \"2069433382\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/candidates/1",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidates",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "107"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6b-Oeku5R/WX699gdR9JE2i30HXS90\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 09:49:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": \"1\",\n        \"contact_home\": \"9055803439\",\n        \"contact_office\": \"5672393822\",\n        \"contact_mobile\": \"2069433382\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Add New Candidate",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/candidates",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"candidates"
+							]
+						},
+						"description": "Adds a new candidate to the database, matching the fields that are provided in the request body. Requires fields for new candidate record to be sent in the request body in order to successfully create new candidate record.\r\n\r\n"
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"first_name\": \"John\",\r\n    \"last_name\": \"Doe\",\r\n    \"job_title\": \"Senior Software Engineer\",\r\n    \"primary_email\": \"johndoe@gmail.com\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/candidates",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidates"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "132"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"84-nTZYXBKqRAmv/d2lWdPQLVeRt2U\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 03 May 2021 05:20:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 101,\n        \"first_name\": \"John\",\n        \"last_name\": \"Doe\",\n        \"job_title\": \"Senior Software Engineer\",\n        \"primary_email\": \"johndoe@gmail.com\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Remove Candidate",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/candidates/:candidateID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"candidates",
+								":candidateID"
+							],
+							"variable": [
+								{
+									"key": "candidateID",
+									"value": "",
+									"description": "Required"
+								}
+							]
+						},
+						"description": "Removes candidate record from database matching the candidate ID provided in the request."
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/candidates/51",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"candidates",
+										"51"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "169"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a9-mDm4eOuFUkBF1Fj9vturQXwVn7g\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 03 May 2021 05:25:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Deleted successfully\",\n    \"data\": {\n        \"fieldCount\": 0,\n        \"affectedRows\": 1,\n        \"insertId\": 0,\n        \"serverStatus\": 2,\n        \"warningCount\": 0,\n        \"message\": \"\",\n        \"protocol41\": true,\n        \"changedRows\": 0\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder contains requests related to directly managing candidate records and information."
+		},
+		{
+			"name": "Locations",
+			"item": [
+				{
+					"name": "Get Cities",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cities",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": null,
+									"description": "optional",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Gets Cities that are represented by candidates in the database. \r\n\r\nTakes a name as an optional parameter, returning record of city with given name, or None if no such city exists."
+					},
+					"response": [
+						{
+							"name": "Example Request - No Limit Passed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cities",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cities"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "215"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d7-qjFLIOsw/bsH7GJGmbCReW3BgMI\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Apr 2021 03:09:18 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"city\": \"Sydney\",\n            \"id\": 1,\n            \"country_id\": 1\n        },\n        {\n            \"city\": \"Melbourne\",\n            \"id\": 2,\n            \"country_id\": 1\n        },\n        {\n            \"city\": \"Perth\",\n            \"id\": 3,\n            \"country_id\": 1\n        },\n        {\n            \"city\": \"Brisbane\",\n            \"id\": 4,\n            \"country_id\": 1\n        },\n        {\n            \"city\": \"Beijing\",\n            \"id\": 5,\n            \"country_id\": 2\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get City by Field",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cityByField",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cityByField"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "city",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Queries database and returns record of city matching provided city ID."
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cityByField?city=Tokyo",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cityByField"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "",
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "city",
+											"value": "Tokyo"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "50"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"32-sZXgMRWoFdq8B2UbKpcqBkhSXec\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Apr 2021 03:21:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"city\": \"Tokyo\",\n            \"id\": 19,\n            \"country_id\": 6\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Cities by Country ID",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/cities/:countryID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"cities",
+								":countryID"
+							],
+							"variable": [
+								{
+									"key": "countryID",
+									"value": "",
+									"description": "Required"
+								}
+							]
+						},
+						"description": "Queries the database and returns all cities that match the given country ID."
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/cities/16",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"cities",
+										"16"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "325"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"145-VSewZznf5uNqC9Q+nYHk7ZR6+n8\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 04:30:28 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"city\": \"New York\",\n            \"id\": 41,\n            \"country_id\": 16\n        },\n        {\n            \"city\": \"Seattle\",\n            \"id\": 42,\n            \"country_id\": 16\n        },\n        {\n            \"city\": \"Los Angeles\",\n            \"id\": 43,\n            \"country_id\": 16\n        },\n        {\n            \"city\": \"Washington\",\n            \"id\": 44,\n            \"country_id\": 16\n        },\n        {\n            \"city\": \"San Francisco\",\n            \"id\": 45,\n            \"country_id\": 16\n        },\n        {\n            \"city\": \"Portland\",\n            \"id\": 46,\n            \"country_id\": 16\n        },\n        {\n            \"city\": \"Austin\",\n            \"id\": 47,\n            \"country_id\": 16\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Country by Field",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/countryByField",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"countryByField"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "",
+									"description": "Country ID. Optional",
+									"disabled": true
+								},
+								{
+									"key": "country",
+									"value": null,
+									"description": "Name of country. Optional",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Queries database for existing country record that matches parameter(s) passed. At least one of the listed query parameters needs to be passed."
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/countryByField?id=5",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"countryByField"
+									],
+									"query": [
+										{
+											"key": "id",
+											"value": "5",
+											"description": "Country ID. Optional"
+										},
+										{
+											"key": "country",
+											"value": null,
+											"description": "Name of country. Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-fUxnJOnRB12jqT2QvxYxSh4hh40\""
+								},
+								{
+									"key": "Date",
+									"value": "Tue, 27 Apr 2021 04:12:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"country\": \"Indonesia\",\n            \"id\": 5\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder contains requests that manage records of cities and countries that are represented by candidates in the database."
+		},
+		{
+			"name": "Functions",
+			"item": [
+				{
+					"name": "Get Function By Field",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/functionByField",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"functionByField"
+							],
+							"query": [
+								{
+									"key": "function_name",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": null,
+									"description": "Optional",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Queries database for function that matches field(s) provided in query parameters. At least one query parameter needs to be provided."
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/functionByField?function_name=saas",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"functionByField"
+									],
+									"query": [
+										{
+											"key": "function_name",
+											"value": "saas"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "52"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"34-qgv6SHOFzHy2+pygR2DXRhEbPkY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Apr 2021 08:33:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"size\": 1,\n    \"data\": [\n        {\n            \"function_name\": \"SaaS\",\n            \"id\": 48\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Functions",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/functions",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"functions"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": null,
+									"description": "Optional",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Queries database and returns functions from database. Takes a limit query parameter. If no limit is provided, it's default value is set to 10."
+					},
+					"response": [
+						{
+							"name": "Example Request - No Limit Passed",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/functions",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"functions"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "364"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16c-X6fF6+vN950JTFdUBpBBndi7IB8\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Apr 2021 08:42:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"function_name\": \"Accounting \",\n            \"id\": 1\n        },\n        {\n            \"function_name\": \"Adtech\",\n            \"id\": 2\n        },\n        {\n            \"function_name\": \"AI\",\n            \"id\": 3\n        },\n        {\n            \"function_name\": \"Analytics\",\n            \"id\": 4\n        },\n        {\n            \"function_name\": \"API\",\n            \"id\": 5\n        },\n        {\n            \"function_name\": \"APM\",\n            \"id\": 6\n        },\n        {\n            \"function_name\": \"Application\",\n            \"id\": 7\n        },\n        {\n            \"function_name\": \"Asset Management\",\n            \"id\": 8\n        },\n        {\n            \"function_name\": \"Back up\",\n            \"id\": 9\n        },\n        {\n            \"function_name\": \"Big 6\",\n            \"id\": 10\n        }\n    ]\n}"
+						},
+						{
+							"name": "Example Request - Limit set to 7",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/functions?limit=7",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"functions"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": "7",
+											"description": "Optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "251"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"fb-6XMai6ypPQoIcjnOCW9kEn1NHlg\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Apr 2021 08:42:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": [\n        {\n            \"function_name\": \"Accounting \",\n            \"id\": 1\n        },\n        {\n            \"function_name\": \"Adtech\",\n            \"id\": 2\n        },\n        {\n            \"function_name\": \"AI\",\n            \"id\": 3\n        },\n        {\n            \"function_name\": \"Analytics\",\n            \"id\": 4\n        },\n        {\n            \"function_name\": \"API\",\n            \"id\": 5\n        },\n        {\n            \"function_name\": \"APM\",\n            \"id\": 6\n        },\n        {\n            \"function_name\": \"Application\",\n            \"id\": 7\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Add Function to Database",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/functions/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"functions",
+								"add"
+							],
+							"query": [
+								{
+									"key": "function_name",
+									"value": "",
+									"description": "Name of function. Required",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Adds function passed as parameter to database, returning the record of the function in the database as a response."
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/functions/add?function_name=test",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"functions",
+										"add"
+									],
+									"query": [
+										{
+											"key": "function_name",
+											"value": "test",
+											"description": "Name of function. Required"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29-lORCD4EwXh8dT/T8fNFPW821nJM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 28 Apr 2021 09:56:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 61,\n        \"function_name\": \"test\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder contains requests related to directly managing records and information regarding the functions (skills) being represented in the database.\r\n\r\n"
+		},
+		{
+			"name": "Industries",
+			"item": [
+				{
+					"name": "Get Industries",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/industries",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"industries"
+							],
+							"query": [
+								{
+									"key": "Limit",
+									"value": null,
+									"description": "Optional",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Queries database and returns industries from database. Takes a limit query parameter. If no limit is provided, it's default value is set to 10.\r\n\r\n"
+					},
+					"response": [
+						{
+							"name": "Example Request - No Limit Provided",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/industries",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"industries"
+									],
+									"query": [
+										{
+											"key": "Limit",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "363"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"16b-x2wCGdZpCm4DO5OAlPfrK2exO2g\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 04:23:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"size\": 10,\n    \"data\": [\n        {\n            \"industry\": \"FSI\",\n            \"id\": 1\n        },\n        {\n            \"industry\": \"Aerospace and Defense\",\n            \"id\": 2\n        },\n        {\n            \"industry\": \"Automotive\",\n            \"id\": 3\n        },\n        {\n            \"industry\": \"Banking\",\n            \"id\": 4\n        },\n        {\n            \"industry\": \"Commerce\",\n            \"id\": 5\n        },\n        {\n            \"industry\": \"Construction\",\n            \"id\": 6\n        },\n        {\n            \"industry\": \"Energy\",\n            \"id\": 7\n        },\n        {\n            \"industry\": \"Engineering\",\n            \"id\": 8\n        },\n        {\n            \"industry\": \"Government/Public Sector\",\n            \"id\": 9\n        },\n        {\n            \"industry\": \"Healthcare\",\n            \"id\": 10\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Industry By Field",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/industryByField",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"industryByField"
+							],
+							"query": [
+								{
+									"key": "industry",
+									"value": "",
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": null,
+									"description": "Optional",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Queries database for function that matches field(s) provided in query parameters. At least one query parameter needs to be provided."
+					},
+					"response": []
+				},
+				{
+					"name": "Add Industry to Database",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/industries/add",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"industries",
+								"add"
+							],
+							"query": [
+								{
+									"key": "industry",
+									"value": "",
+									"description": "Name of Industry. Required",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Adds industry passed as parameter to database, returning the record of the industry in the database as a response.\r\n\r\n"
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "http://localhost:8080/industries/add?industry=Technology",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"industries",
+										"add"
+									],
+									"query": [
+										{
+											"key": "industry",
+											"value": "Technology",
+											"description": "Name of Industry. Required"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "39"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"27-k3RgCN7uANAfnGkLOkG6hEzTlB0\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 29 Apr 2021 04:47:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"data\": {\n        \"id\": 23,\n        \"industry\": \"Technology\"\n    }\n}"
+						}
+					]
+				}
+			],
+			"description": "This folder contains requests related to directly managing records and information regarding the industries being represented in the database.\r\n"
+		},
+		{
+			"name": "Employers",
+			"item": [
+				{
+					"name": "Get Employers",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employers"
+							],
+							"query": [
+								{
+									"key": "limit",
+									"value": null,
+									"description": "Optional",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Submits a request to the database to retrieve employers. Takes a parameter called limit that specifies the number of records to be retrieved. If no limit is specified, the default value is set to 10."
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/employers",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employers"
+									],
+									"query": [
+										{
+											"key": "limit",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1259"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4eb-t0lTa5/dp3aD9XXCWErzPoZ5/g0\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 03 May 2021 03:14:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"size\": 10,\n    \"data\": [\n        {\n            \"name\": \"Wikido\",\n            \"address\": \"06572 Sunbrook Hill\",\n            \"contact_number\": \"1857222412\",\n            \"email_address\": \"cdollen0@fda.gov\",\n            \"id\": 1\n        },\n        {\n            \"name\": \"Avamm\",\n            \"address\": \"15 Russell Center\",\n            \"contact_number\": \"8887946203\",\n            \"email_address\": \"obowering1@bloglines.com\",\n            \"id\": 2\n        },\n        {\n            \"name\": \"Zooveo\",\n            \"address\": \"9076 Old Shore Trail\",\n            \"contact_number\": \"8012151682\",\n            \"email_address\": \"sdinesen2@youku.com\",\n            \"id\": 3\n        },\n        {\n            \"name\": \"Livepath\",\n            \"address\": \"98 Hallows Drive\",\n            \"contact_number\": \"7473268117\",\n            \"email_address\": \"hhouseman3@theatlantic.com\",\n            \"id\": 4\n        },\n        {\n            \"name\": \"Mydo\",\n            \"address\": \"79 Merry Way\",\n            \"contact_number\": \"6221944887\",\n            \"email_address\": \"dkiezler4@google.it\",\n            \"id\": 5\n        },\n        {\n            \"name\": \"Youspan\",\n            \"address\": \"37 Vera Alley\",\n            \"contact_number\": \"2333077413\",\n            \"email_address\": \"glister5@toplist.cz\",\n            \"id\": 6\n        },\n        {\n            \"name\": \"Trilia\",\n            \"address\": \"76293 Cascade Drive\",\n            \"contact_number\": \"8462265539\",\n            \"email_address\": \"fraper6@rakuten.co.jp\",\n            \"id\": 7\n        },\n        {\n            \"name\": \"Meembee\",\n            \"address\": \"61 Cody Road\",\n            \"contact_number\": \"9316704300\",\n            \"email_address\": \"efarndon7@wired.com\",\n            \"id\": 8\n        },\n        {\n            \"name\": \"Zoonder\",\n            \"address\": \"9 Linden Way\",\n            \"contact_number\": \"5581938824\",\n            \"email_address\": \"mgandley8@reference.com\",\n            \"id\": 9\n        },\n        {\n            \"name\": \"Fliptune\",\n            \"address\": \"53 Anzinger Drive\",\n            \"contact_number\": \"7281710834\",\n            \"email_address\": \"tfernley9@samsung.com\",\n            \"id\": 10\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get Employer By Field",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employerByField",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employerByField"
+							],
+							"query": [
+								{
+									"key": "address",
+									"value": null,
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "contact_number",
+									"value": null,
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "email_address",
+									"value": null,
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "id",
+									"value": null,
+									"description": "Optional",
+									"disabled": true
+								},
+								{
+									"key": "name",
+									"value": "Zoonder",
+									"description": "Optional",
+									"disabled": true
+								}
+							]
+						},
+						"description": "Queries database for employers that match the fields provided in the request. At least one field needs to be provided to search the database."
+					},
+					"response": [
+						{
+							"name": "Example Request",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://localhost:8080/employerByField?name=Zoonder",
+									"protocol": "http",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"employerByField"
+									],
+									"query": [
+										{
+											"key": "address",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "contact_number",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "email_address",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "id",
+											"value": null,
+											"description": "Optional",
+											"disabled": true
+										},
+										{
+											"key": "name",
+											"value": "Zoonder",
+											"description": "Optional"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "142"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"8e-91RaZsW6MzWiN1gD4joJQizG2gQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 03 May 2021 03:25:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"size\": 1,\n    \"data\": [\n        {\n            \"name\": \"Zoonder\",\n            \"address\": \"9 Linden Way\",\n            \"contact_number\": \"5581938824\",\n            \"email_address\": \"mgandley8@reference.com\",\n            \"id\": 9\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Employer by ID",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/updateEmployer/:employerID",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"updateEmployer",
+								":employerID"
+							],
+							"variable": [
+								{
+									"key": "employerID",
+									"value": "",
+									"description": "Required"
+								}
+							]
+						},
+						"description": "Given an employer's database ID, updates employer information in database with the information provided in request. Requires fields to be updated to be passed in request body."
+					},
+					"response": []
+				},
+				{
+					"name": "Add New Employer",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/employers",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"employers"
+							]
+						},
+						"description": "Adds a new employer to the database, matching the fields that are provided in the request body. Requires fields for new employer record to be sent in the request body in order to successfully create new employer record."
+					},
+					"response": []
+				}
+			],
+			"description": "This folder contains requests related to directly managing records and information regarding the employers being represented in the database.\r\n"
+		}
+	]
+}
